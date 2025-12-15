@@ -1,2 +1,15 @@
 @import "tailwindcss";
 
+@theme {
+  --color-gold-50: oklch(98.5% 0.02 85);
+  --color-gold-100: oklch(96% 0.06 85);
+  --color-gold-200: oklch(92% 0.11 85);
+  --color-gold-300: oklch(88% 0.15 85);
+  --color-gold-400: oklch(86% 0.18 85);
+  --color-gold-500: oklch(85% 0.19 85);
+  --color-gold-600: oklch(75% 0.17 85);
+  --color-gold-700: oklch(65% 0.15 85);
+  --color-gold-800: oklch(55% 0.12 85);
+  --color-gold-900: oklch(42% 0.09 85);
+  --color-gold-950: oklch(28% 0.06 85);
+}
