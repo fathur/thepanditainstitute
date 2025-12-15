@@ -2,6 +2,26 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("assets");
   eleventyConfig.addPassthroughCopy({ "src/icons": "icons" });
 
+  // REQUIRE the Markdown-It library Eleventy uses internally
+  let markdownIt = require("markdown-it");
+
+  // Get the default configuration object from Eleventy
+  let options = {
+    html: true,
+    breaks: true,
+    linkify: true
+  };
+  
+  // Create an instance of the parser
+  let md = markdownIt(options);
+
+  // Register the custom 'markdown' filter
+  // The first argument is the filter name (e.g., 'markdown')
+  // The second argument is the function that runs when the filter is called.
+  eleventyConfig.addFilter("markdown", (content) => {
+    return md.render(content);
+  });
+
   return {
     dir: {
       input: "./src",
