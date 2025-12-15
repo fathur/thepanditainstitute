@@ -47,4 +47,8 @@
   .btn-emerald:hover {
     @apply bg-white text-emerald-600 border-2 border-emerald-600;
   }
+
+  .text-gold-gradient {
+    @apply bg-gradient-to-r from-gold-600 via-gold-400 to-gold-600 bg-clip-text text-transparent;
+  }
 }
