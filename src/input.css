@@ -13,3 +13,38 @@
   --color-gold-900: oklch(42% 0.09 85);
   --color-gold-950: oklch(28% 0.06 85);
 }
+
+@layer components {
+  .bg-gold {
+    @apply bg-gradient-to-br from-gold-600 via-yellow-300 to-gold-600;
+  }
+
+  .btn-gold {
+    @apply inline-flex items-center justify-center gap-2 rounded-full font-semibold text-gold-900 shadow-xl transition duration-300;
+    @apply bg-gradient-to-br from-gold-600 via-yellow-300 to-gold-600;
+  }
+
+  .btn-gold:hover {
+    @apply shadow-2xl;
+    @apply bg-gradient-to-br from-gold-400 via-yellow-100 to-gold-300;
+  }
+
+  .btn-emerald-white {
+    @apply inline-flex items-center justify-center gap-2 rounded-full font-semibold border-2 border-emerald-600 text-emerald-600 transition duration-300;
+    @apply bg-white
+  }
+
+  .btn-emerald-white:hover {
+    @apply shadow-2xl;
+    @apply bg-emerald-600 text-white;
+  }
+
+  .btn-emerald {
+    @apply inline-flex items-center justify-center gap-2 rounded-full font-semibold border-2 border-white transition duration-300;
+    @apply bg-emerald-600 text-white;
+  }
+
+  .btn-emerald:hover {
+    @apply bg-white text-emerald-600 border-2 border-emerald-600;
+  }
+}
