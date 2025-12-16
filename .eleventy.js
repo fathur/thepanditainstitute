@@ -1,6 +1,6 @@
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("assets");
-  eleventyConfig.addPassthroughCopy({ "src/icons": "icons" });
+  eleventyConfig.addPassthroughCopy({ "src/_assets/icons": "icons" });
 
   // REQUIRE the Markdown-It library Eleventy uses internally
   let markdownIt = require("markdown-it");
@@ -21,6 +21,9 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("markdown", (content) => {
     return md.render(content);
   });
+
+  const { eleventyImageTransformPlugin } = require("@11ty/eleventy-img");
+  eleventyConfig.addPlugin(eleventyImageTransformPlugin);
 
   return {
     dir: {
