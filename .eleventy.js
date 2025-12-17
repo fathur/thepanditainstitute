@@ -1,4 +1,4 @@
-module.exports = function (eleventyConfig) {
+module.exports = async function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("assets");
   eleventyConfig.addPassthroughCopy({ "src/_assets/icons": "icons" });
 
@@ -23,7 +23,11 @@ module.exports = function (eleventyConfig) {
   });
 
   const { eleventyImageTransformPlugin } = require("@11ty/eleventy-img");
+  // Font Awesome plugin is an ES module, so we need to use dynamic import
+  const fontAwesomePlugin = (await import("@11ty/font-awesome")).default;
+  
   eleventyConfig.addPlugin(eleventyImageTransformPlugin);
+  eleventyConfig.addPlugin(fontAwesomePlugin);
 
   return {
     dir: {
