@@ -1,12 +1,45 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
   <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z2B0GCNE5B"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-Z2B0GCNE5B');
+    </script>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{{ title | default("The Pandita Institute") }}</title>
     {% if description %}
     <meta name="description" content="{{ description }}" />
     {% endif %}
+    
+    <!-- SEO Meta Tags -->
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="The Pandita Institute" />
+    <link rel="canonical" href="https://thepanditainstitute.com{{ page.url | url }}" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://thepanditainstitute.com{{ page.url | url }}" />
+    <meta property="og:title" content="{{ title | default('The Pandita Institute') }}" />
+    {% if description %}
+    <meta property="og:description" content="{{ description }}" />
+    {% endif %}
+    <meta property="og:site_name" content="The Pandita Institute" />
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://thepanditainstitute.com{{ page.url | url }}" />
+    <meta name="twitter:title" content="{{ title | default('The Pandita Institute') }}" />
+    {% if description %}
+    <meta name="twitter:description" content="{{ description }}" />
+    {% endif %}
+    
     <link rel="stylesheet" href="/assets/css/tailwind.css" />
     <style>
       .fade-in {
