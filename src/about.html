@@ -3,6 +3,22 @@ layout: base.njk
 title: "About Us - The Pandita Institute"
 description: "Discover The Pandita Institute story, purpose, and values."
 bodyClass: bg-white
+values:
+  - title: Learning
+    letter: L
+    description: We honor learning as a spiritual act — a humble return to growth, awareness, and inner expansion.
+  - title: Integrity
+    letter: I
+    description: We walk with sincerity and truthfulness, staying aligned with values that reflect who we are at the soul’s deepest level.
+  - title: Growth
+    letter: G
+    description: We cultivate growth that transforms the whole person — expanding clarity, consciousness, and the courage to evolve.
+  - title: Humanity
+    letter: H
+    description: We uphold compassion, presence, and connection, recognizing the divine dignity within every individual.
+  - title: Transformation
+    letter: T
+    description: We serve as guides on the journey of becoming — helping people grow from the inside and radiate their light outward into the world.
 ---
 <!-- About -->
     <section id="about" class="relative bg-gradient-to-br from-emerald-50 via-white to-teal-50 pt-20 pb-16">
@@ -125,7 +141,7 @@ bodyClass: bg-white
             <div class="max-w-4xl mx-auto space-y-8">
                 <div class="fade-in bg-gold rounded-4xl rounded-[32px] p-10 shadow-xl">
                     <div class="uppercase text-sm tracking-[0.3em] text-white/70 mb-4">Vision</div>
-                    <p class="text-3xl md:text-4xl font-semibold leading-snug">To become a trusted catalyst for human and organizational transformation — empowering people and institutions to grow with purpose and glow with impact, creating a world where learning ignites lasting change.</p>
+                    <p class="text-3xl md:text-4xl font-semibold leading-snug text-gold-900">To become a trusted catalyst for human and organizational transformation — empowering people and institutions to grow with purpose and glow with impact, creating a world where learning ignites lasting change.</p>
                 </div>
                 <div class="fade-in bg-white border border-slate-200 rounded-[32px] p-10 shadow-lg">
                     <div class="flex items-center gap-3 text-sm font-semibold tracking-widest uppercase text-slate-500 mb-6">
@@ -173,41 +189,15 @@ bodyClass: bg-white
                 <p>This is the spirit behind LIGHT — the values that illuminate our journey, anchor our intentions, and align every action with something greater than ourselves.</p>
             </div>
             <ul class="mt-12 space-y-6">
+                {% for value in values %}
                 <li class="fade-in flex items-start gap-5 bg-gradient-to-br from-emerald-50 to-white border border-emerald-100 rounded-3xl p-6 shadow-sm">
-                    <div class="flex-shrink-0 inline-flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-gold-600 via-yellow-300 to-gold-600 text-white text-3xl font-black shadow-[0_15px_35px_rgba(16,185,129,0.25)]">L</div>
+                    <div class="flex-shrink-0 inline-flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-gold-600 via-yellow-300 to-gold-600 text-gold-900 text-3xl font-black shadow-[0_15px_35px_rgba(16,185,129,0.25)]">{{ value.letter }}</div>
                     <div>
-                        <h3 class="text-2xl font-semibold text-slate-900 mb-2">Learning</h3>
-                        <p class="text-slate-700">We honor learning as a spiritual act — a humble return to growth, awareness, and inner expansion.</p>
+                        <h3 class="text-2xl font-semibold text-slate-900 mb-2">{{ value.title }}</h3>
+                        <p class="text-slate-700">{{ value.description }}</p>
                     </div>
                 </li>
-                <li class="fade-in flex items-start gap-5 bg-gradient-to-br from-teal-50 to-white border border-teal-100 rounded-3xl p-6 shadow-sm">
-                    <div class="flex-shrink-0 inline-flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-gold-600 via-yellow-300 to-gold-600 text-white text-3xl font-black shadow-[0_15px_35px_rgba(13,148,136,0.25)]">I</div>
-                    <div>
-                        <h3 class="text-2xl font-semibold text-slate-900 mb-2">Integrity</h3>
-                        <p class="text-slate-700">We walk with sincerity and truthfulness, staying aligned with values that reflect who we are at the soul’s deepest level.</p>
-                    </div>
-                </li>
-                <li class="fade-in flex items-start gap-5 bg-gradient-to-br from-white to-slate-50 border border-slate-200 rounded-3xl p-6 shadow-sm">
-                    <div class="flex-shrink-0 inline-flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-gold-600 via-yellow-300 to-gold-600 text-white text-3xl font-black shadow-[0_15px_35px_rgba(15,23,42,0.2)]">G</div>
-                    <div>
-                        <h3 class="text-2xl font-semibold text-slate-900 mb-2">Growth</h3>
-                        <p class="text-slate-700">We cultivate growth that transforms the whole person — expanding clarity, consciousness, and the courage to evolve.</p>
-                    </div>
-                </li>
-                <li class="fade-in flex items-start gap-5 bg-gradient-to-br from-amber-50 to-white border border-amber-100 rounded-3xl p-6 shadow-sm">
-                    <div class="flex-shrink-0 inline-flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-gold-600 via-yellow-300 to-gold-600 text-white text-3xl font-black shadow-[0_15px_35px_rgba(245,158,11,0.25)]">H</div>
-                    <div>
-                        <h3 class="text-2xl font-semibold text-slate-900 mb-2">Humanity</h3>
-                        <p class="text-slate-700">We uphold compassion, presence, and connection, recognizing the divine dignity within every individual.</p>
-                    </div>
-                </li>
-                <li class="fade-in flex items-start gap-5 bg-gradient-to-br from-emerald-600/10 to-white border border-emerald-200 rounded-3xl p-6 shadow-sm">
-                    <div class="flex-shrink-0 inline-flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-gold-600 via-yellow-300 to-gold-600 text-white text-3xl font-black shadow-[0_15px_35px_rgba(4,120,87,0.25)]">T</div>
-                    <div>
-                        <h3 class="text-2xl font-semibold text-slate-900 mb-2">Transformation</h3>
-                        <p class="text-slate-700">We serve as guides on the journey of becoming — helping people grow from the inside and radiate their light outward into the world.</p>
-                    </div>
-                </li>
+                {% endfor %}
             </ul>
         </div>
     </section>
