@@ -5,14 +5,31 @@ description: Expert coaching, training, and mentoring services empowering indivi
 bodyClass: bg-white
 clintGroups:
   - title: Individuals
-    description: Personal development, career advancement, and life coaching for professionals and entrepreneurs seeking growth.
+    description: |
+      Personal development, career advancement, and coaching for professionals, leaders, and 
+      entrepreneurs seeking clarity and growth.
     icon: "fa-person"
+
   - title: Companies
-    description: Corporate training, leadership development, and organizational transformation for businesses of all sizes.
+    description: |
+      Corporate training, leadership development, and organizational transformation for businesses across industries and scales.
     icon: "fa-building"
-  - title: Government
-    description: Public sector training, capacity building, and strategic support for policy implementation within government agencies.
+
+  - title: Government Bodies
+    description: |
+      Public sector training, capacity building, and strategic support for policy implementation and 
+      institutional effectiveness.
     icon: "fa-building-columns"
+
+  - title: Educational Institutions
+    description: |
+      Student development, leadership programs, and career readiness initiatives for universities, faculties, and academic communities.
+    icon: "fa-graduation-cap"
+
+  - title: Non-Profit Organizations
+    description: | 
+      Capability building and leadership support for mission-driven organizations creating positive social impact.
+    icon: "fa-building-ngo"
 ---
 <!-- Hero Section -->
 <section class="relative pt-20 pb-32 overflow-hidden text-white">
@@ -33,7 +50,7 @@ clintGroups:
           Transform Your <span class="bg-gradient-to-r from-gold-600 via-yellow-400 to-gold-500 bg-clip-text text-transparent">Potential</span> Into Success
         </h1>
         <p class="text-xl text-emerald-50 mb-8 leading-relaxed text-right">
-          As a holistic learning and transformation partner, we empower individuals, businesses, and government institutions to grow from within — strengthening self-awareness, mindset, capability, and cultural alignment — while amplifying outward influence through authentic, strategic communication. By integrating assessments, coaching, training, mentoring, consulting, and publishing, we bridge insight with execution to create meaningful, tailored, and sustainable transformation. Clarity that strengthens. Presence that influences. Growth that endures.
+          As a holistic learning and transformation partner, we empower individuals, businesses, and government institutions to grow from within — strengthening self-awareness, mindset, capability, and cultural alignment — while amplifying outward influence through authentic, strategic communication. By integrating assessments, coaching, training, mentoring, consulting, and publishing; we bridge insight with execution to create meaningful, tailored, and sustainable transformation. Clarity that strengthens. Presence that influences. Growth that endures.
         </p>
         <div class="flex flex-col justify-end sm:flex-row gap-4">
           <a href="/contact/" class="btn-gold px-10 py-4">
@@ -141,9 +158,9 @@ clintGroups:
         Partnering with individuals, companies, and public institutions shaping impact worldwide.
       </p>
     </div>
-    <div class="grid md:grid-cols-3 gap-8">
+    <div class="flex flex-wrap justify-center gap-8">
       {% for clientGroup in clintGroups %}
-      <div class="fade-in bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:scale-105 transform">
+      <div class="fade-in bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:scale-105 transform md:w-1/4">
         <div class="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mb-6  text-sm">
           <i class="fa-solid {{ clientGroup.icon }} text-teal-600 w-7"></i>
         </div>

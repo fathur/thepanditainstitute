@@ -19,6 +19,7 @@
     "@11ty/eleventy-img": "^6.0.4",
     "@11ty/font-awesome": "^1.0.1",
     "@tailwindcss/cli": "^4.1.17",
+    "@tailwindcss/typography": "^0.5.19",
     "autoprefixer": "^10.4.22",
     "concurrently": "^9.2.1",
     "postcss": "^8.5.6",
