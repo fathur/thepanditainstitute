@@ -192,30 +192,10 @@ clients:
     </div>
 </section>
 
-<!-- Industry Categories -->
-<section class="py-20 bg-slate-50">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16 fade-in">
-            <p class="inline-flex items-center px-4 py-1.5 rounded-full bg-emerald-100 text-emerald-700 text-xs font-semibold tracking-widest uppercase">Industries We Serve</p>
-            <h2 class="text-4xl font-bold text-slate-900 mt-4">Diverse Sectors, Unified Purpose</h2>
-        </div>
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {% for industry in industries %}
-            <div class="fade-in bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 hover:scale-[1.02] transform">
-                <div class="w-14 h-14 bg-emerald-100 rounded-xl flex items-center justify-center mb-5">
-                    <i class="fa-solid {{ industry.icon }} text-emerald-600 w-7"></i>
-                </div>
-                <h3 class="text-xl font-bold text-slate-800 mb-2">{{ industry.title }}</h3>
-                <p class="text-slate-600">{{ industry.description }}</p>
-            </div>
-            {% endfor %}
-           
-        </div>
-    </div>
-</section>
+
 
 <!-- Client Logos Placeholder -->
-<section class="py-20 bg-white">
+<section class="py-20 bg-white" id="client-list">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-12 fade-in">
             <h2 class="text-4xl font-bold text-slate-800 mb-4">Trusted By Leading Organizations</h2>
@@ -228,7 +208,6 @@ clients:
                   <img src="{{ client.logo }}" alt="{{ client.name }}" eleventy:widths="500" class="w-full h-20 object-contain">
 
               </div>
-              <div class="text-center mt-2 text-sm font-medium text-slate-700 max-w-32 mx-auto leading-tight">{{ client.name }}</div>
             </div>
             {% endfor %}
             
@@ -236,33 +215,7 @@ clients:
     </div>
 </section>
 
-<!-- Partnership Philosophy -->
-<section class="py-20 bg-slate-50">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="fade-in bg-white rounded-3xl p-10 md:p-14 shadow-lg">
-            <div class="text-center mb-10">
-                <div class="w-16 h-16 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <i class="fa-solid fa-handshake text-white w-7 h-7"></i>
-                </div>
-                <h2 class="text-3xl font-bold text-slate-800 mb-4">Our Partnership Philosophy</h2>
-            </div>
-            <div class="grid md:grid-cols-3 gap-8 text-center">
-                <div>
-                    <div class="text-4xl font-bold text-emerald-600 mb-2">Co-Create</div>
-                    <p class="text-slate-600">We design solutions together, ensuring every program reflects your unique context and aspirations.</p>
-                </div>
-                <div>
-                    <div class="text-4xl font-bold text-teal-600 mb-2">Commit</div>
-                    <p class="text-slate-600">We invest in long-term relationships, not one-time transactions. Your success is our success.</p>
-                </div>
-                <div>
-                    <div class="text-4xl font-bold text-emerald-600 mb-2">Celebrate</div>
-                    <p class="text-slate-600">We honor every milestone together, recognizing the courage it takes to grow and transform.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+
 
 <!-- CTA Section -->
 <section class="py-20 bg-emerald-600">

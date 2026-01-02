@@ -30,6 +30,27 @@ clintGroups:
     description: | 
       Capability building and leadership support for mission-driven organizations creating positive social impact.
     icon: "fa-building-ngo"
+
+clients:
+ 
+  - name: Ayuberga
+    logo: /_assets/images/clients/ayuberga.png
+  
+  - name: BKN
+    logo: /_assets/images/clients/bkn.png
+  
+  - name: Kilang Pertamina International
+    logo: /_assets/images/clients/kilang-pertamina-international.png
+ 
+  - name: Marvin Foundation
+    logo: /_assets/images/clients/marvin-foundation.png
+ 
+  - name: MRA Group
+    logo: /_assets/images/clients/mra-group.png
+ 
+  - name: SGI Logistic
+    logo: /_assets/images/clients/sgi-logistic.webp
+ 
 ---
 <!-- Hero Section -->
 <section class="relative pt-20 pb-32 overflow-hidden text-white">
@@ -83,7 +104,7 @@ clintGroups:
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="grid grid-cols-3 md:grid-cols-3 gap-8 text-center text-white">
       <div class="fade-in">
-        <div class="text-5xl font-bold mb-2 counter" data-target="100">0</div>
+        <div class="text-5xl font-bold mb-2"><span class="counter" data-target="100">0</span>+</div>
         <div class="text-emerald-100">Happy Clients</div>
       </div>
       <div class="fade-in">
@@ -95,6 +116,30 @@ clintGroups:
         <div class="text-emerald-100">Success Rate %</div>
       </div>
      
+    </div>
+  </div>
+</section>
+
+<!-- Who We Serve -->
+<section class="py-20 bg-slate-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16 fade-in">
+      <h2 class="text-4xl font-bold text-slate-800 mb-4">Who We Serve</h2>
+      <p class="text-xl text-slate-600 max-w-2xl mx-auto">
+        Partnering with individuals, companies, and public institutions shaping impact worldwide.
+      </p>
+    </div>
+    <div class="flex flex-wrap justify-center gap-8">
+      {% for clientGroup in clintGroups %}
+      <div class="fade-in bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:scale-105 transform md:w-1/4">
+        <div class="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mb-6  text-sm">
+          <i class="fa-solid {{ clientGroup.icon }} text-teal-600 w-7"></i>
+        </div>
+        <h3 class="text-2xl font-bold text-slate-800 mb-3">{{ clientGroup.title }}</h3>
+        <p class="text-slate-600 leading-relaxed">{{ clientGroup.description }}</p>
+      </div>
+      {% endfor %}
+      
     </div>
   </div>
 </section>
@@ -149,29 +194,56 @@ clintGroups:
   </div>
 </section>
 
-<!-- Who We Serve -->
-<section class="py-20 bg-slate-50">
+
+
+<!-- Why Choose Us -->
+<section id="why-choose-us" class="py-20 bg-slate-50">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center mb-16 fade-in">
-      <h2 class="text-4xl font-bold text-slate-800 mb-4">Who We Serve</h2>
-      <p class="text-xl text-slate-600 max-w-2xl mx-auto">
-        Partnering with individuals, companies, and public institutions shaping impact worldwide.
-      </p>
-    </div>
-    <div class="flex flex-wrap justify-center gap-8">
-      {% for clientGroup in clintGroups %}
-      <div class="fade-in bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:scale-105 transform md:w-1/4">
-        <div class="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mb-6  text-sm">
-          <i class="fa-solid {{ clientGroup.icon }} text-teal-600 w-7"></i>
-        </div>
-        <h3 class="text-2xl font-bold text-slate-800 mb-3">{{ clientGroup.title }}</h3>
-        <p class="text-slate-600 leading-relaxed">{{ clientGroup.description }}</p>
+      <div class="fade-in text-center space-y-4 mb-10">
+         
+          <p class="text-xs tracking-[0.4em] text-slate-500 uppercase">What Sets Us Apart</p>
+          <h2 class="text-4xl font-bold text-slate-900">Why Choose Us</h2>
+
+          <p class="text-lg text-slate-600 max-w-3xl mx-auto">
+              The Pandita Institute goes beyond conventional training. We architect holistic human and organizational transformation, uniting strategic depth with practical execution. Our differentiator lies in the intentional design behind every solution—where internal excellence fuels outward influence.
+          </p>
       </div>
-      {% endfor %}
-      
-    </div>
+      <div class="grid gap-6 md:grid-cols-2">
+          <article class="fade-in bg-white border border-slate-200 rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all duration-300">
+              <h3 class="text-2xl font-semibold text-slate-900 mb-3">Holistic Approach</h3>
+              <p class="text-slate-600 leading-relaxed">
+                  Integrated development spanning assessment, training, coaching, mentoring, counseling, and strategic capability design for both individuals and organizations.
+              </p>
+          </article>
+          <article class="fade-in bg-white border border-slate-200 rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all duration-300">
+              <h3 class="text-2xl font-semibold text-slate-900 mb-3">Grow &amp; Glow Philosophy</h3>
+              <p class="text-slate-600 leading-relaxed">
+                  Strengthening inner clarity, mindset, and behavior (Grow), while amplifying strategic visibility and influence (Glow).
+              </p>
+          </article>
+          <article class="fade-in bg-white border border-slate-200 rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all duration-300">
+              <h3 class="text-2xl font-semibold text-slate-900 mb-3">Fully Customizable Solutions</h3>
+              <p class="text-slate-600 leading-relaxed">
+                  Programs are tailored to your context—industry, culture, audience, and transformation goals—not bound to templates.
+              </p>
+          </article>
+          <article class="fade-in bg-white border border-slate-200 rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all duration-300">
+              <h3 class="text-2xl font-semibold text-slate-900 mb-3">Experienced Experts &amp; Advisors</h3>
+              <p class="text-slate-600 leading-relaxed">
+                  A multidisciplinary team and advisory network with strong track records in communications, leadership, human development, and organizational change.
+              </p>
+          </article>
+          <article class="fade-in bg-white border border-slate-200 rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 md:col-span-2">
+              <h3 class="text-2xl font-semibold text-slate-900 mb-3">Real, Measurable Impact</h3>
+              <p class="text-slate-600 leading-relaxed">
+                  Designed for actionability and impact, delivering insights, tools, behavior shifts, and measurable progress across stakeholders.
+              </p>
+          </article>
+      </div>
   </div>
 </section>
+
+{% include "home/clients.html" %}
 
 <!-- CTA Section -->
 <section class="py-20 bg-gradient-to-br from-emerald-600 to-teal-600">
