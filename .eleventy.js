@@ -1,6 +1,7 @@
 module.exports = async function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("assets");
   eleventyConfig.addPassthroughCopy({ "src/_assets/icons": "icons" });
+  eleventyConfig.addPassthroughCopy({ "src/_assets/images/favicon": "_assets/images/favicon" });
 
   // REQUIRE the Markdown-It library Eleventy uses internally
   let markdownIt = require("markdown-it");
