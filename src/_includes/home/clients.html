@@ -1,0 +1,27 @@
+<section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12 fade-in">
+            <h2 class="text-4xl font-bold text-slate-800 mb-4">Our Happy Clients</h2>
+            <p class="text-xl text-slate-600">Organizations that have partnered with us on their transformation journey.</p>
+        </div>
+        <div class="flex flex-wrap justify-center gap-8">
+            {% for client in clients %}
+            <div>
+              <div class="{{ client.bgColor | default('') }} w-50 rounded-2xl  px-4 py-2 items-center justify-center text-slate-400 font-semibold">
+                  <img src="{{ client.logo }}" alt="{{ client.name }}" eleventy:widths="500" class="w-full h-20 object-contain">
+
+              </div>
+            </div>
+            {% endfor %}
+            
+        </div>
+        <div class="text-center mt-12 fade-in">
+            <a href="/clients#client-list" class="inline-flex items-center text-slate-600 hover:text-emerald-600 transition-colors duration-300 text-lg font-medium group">
+                <span>And many more</span>
+                <svg class="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                </svg>
+            </a>
+        </div>
+    </div>
+</section>
